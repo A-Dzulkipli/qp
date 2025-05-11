@@ -132,9 +132,10 @@ class CoinGame:
                 self.score += 1
                 outcome = 1
                 self.success[coin] += 1
+            else:
+                outcome = 0
             self.history[coin] += 1
             self.moves -= 1
-            outcome = 0
             return [outcome, self.moves, self.score, self.history, self.success]
 
 
